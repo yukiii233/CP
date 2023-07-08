@@ -197,7 +197,7 @@ void add_edge(int u, int v, int flow, int cap, int w) {
 }
 bool spfa(int s, int t) {
     memset(vis, 0, sizeof vis);
-    std::fill(dis + 1, dis + n + 1, inf);
+    std::fill(dis, dis + t + 1, inf);
     std::queue<int> q;
     q.push(s);
     dis[s] = 0;
